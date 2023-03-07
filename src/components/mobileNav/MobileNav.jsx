@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { BiMenu } from 'react-icons/bi';
+import { IoLogoTwitter } from 'react-icons/io';
+import { HiOutlineSparkles } from 'react-icons/hi';
 import SideMenu from '../sideMenu';
 import './index.css';
 
@@ -13,18 +15,10 @@ const MobileNav = () => {
 
   return (
     <div className="MobileNav">
-      <div className="burger">
-        <BiMenu className="icon" onClick={burgerTrigger} />
-      </div>
+      <BiMenu className="icon" onClick={burgerTrigger} />
+      <IoLogoTwitter className="icon" />
+      <HiOutlineSparkles className="icon" />
       <SideMenu showMenu={showMenu} />
-      <img
-        src="https://img.icons8.com/nolan/512/twitter.png"
-        alt="twitter logo"
-      />
-      <img
-        src="https://cdn-icons-png.flaticon.com/512/6742/6742248.png"
-        alt="sparkles image"
-      />
     </div>
   );
 };

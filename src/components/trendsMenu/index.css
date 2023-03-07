@@ -1,0 +1,9 @@
+.TrendsMenu {
+  overflow: scroll;
+  margin-top: 25px;
+}
+
+.TrendsMenu h3 {
+  text-transform: capitalize;
+  text-align: center;
+}

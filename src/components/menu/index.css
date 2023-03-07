@@ -1,0 +1,22 @@
+.Menu {
+  display: none;
+}
+
+@media screen and (min-width: 820px) {
+  .Menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-right: 1px solid lightslategray;
+    height: 100vh;
+    width: 25%;
+    padding: 25px;
+  }
+
+  .Menu .logo {
+    font-size: 2.5rem;
+    color: #05a9f4;
+    margin-bottom: 50px;
+  }
+}

@@ -1,11 +1,11 @@
 .single-content {
   border-bottom: 1px solid #f0f0f0;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 15px;
+  justify-content: center;
+  gap: 25px;
   padding: 25px;
-  height: 150px;
+  min-height: 150px;
+  flex-shrink: 0;
 }
 
 @media screen and (max-width: 300px) {
@@ -25,8 +25,8 @@
 
 .text-info {
   position: relative;
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  width: 350px;
   min-width: 150px;
 }
 

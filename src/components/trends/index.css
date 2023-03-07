@@ -1,0 +1,16 @@
+.Trends {
+  display: none;
+}
+
+@media screen and (min-width: 820px) {
+  .Trends {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 1px solid lightslategray;
+    height: 100vh;
+    width: 25%;
+    padding: 25px;
+  }
+}

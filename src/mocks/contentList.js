@@ -99,6 +99,36 @@ const contentList = [
       username: 'mbrooksbanky',
     },
   },
+  {
+    id: 11,
+    body: 'Wonderful ideas!',
+    postId: 4,
+    image: 'https://robohash.org/10',
+    user: {
+      id: 35,
+      username: 'mbrooksbanky',
+    },
+  },
+  {
+    id: 12,
+    body: 'I knew you could do it!',
+    postId: 64,
+    image: 'https://robohash.org/9',
+    user: {
+      id: 31,
+      username: 'smargiottau',
+    },
+  },
+  {
+    id: 13,
+    body: 'You are an amazing writer!',
+    postId: 61,
+    image: 'https://robohash.org/3',
+    user: {
+      id: 29,
+      username: 'jissetts',
+    },
+  },
 ];
 
 export default contentList;

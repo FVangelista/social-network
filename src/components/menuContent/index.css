@@ -1,0 +1,31 @@
+.MenuContent ul {
+  list-style-type: none;
+}
+.MenuContent ul li {
+  margin-bottom: 25px;
+}
+
+.MenuContent ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: lightslategray;
+  letter-spacing: 1px;
+}
+
+.MenuContent ul li a:hover {
+  color: lightblue;
+}
+
+.MenuContent .tweet-btn {
+  margin-top: 50px;
+  padding: 15px;
+  width: 150px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  color: #fff;
+  background-color: #05a9f4;
+  border: none;
+  cursor: pointer;
+}
