@@ -1,0 +1,61 @@
+.SideMenu {
+  position: fixed;
+  top: 100px;
+  left: -250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  background-color: #fff;
+  z-index: 10;
+  width: 250px;
+  height: calc(100% - 175px);
+  padding: 25px;
+  border-right: 1px solid lightslategray;
+  transition: all 0.35s ease;
+}
+
+.SideMenu ul {
+  list-style-type: none;
+}
+.SideMenu ul li {
+  margin-bottom: 25px;
+}
+
+.SideMenu ul li a {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: lightslategray;
+  letter-spacing: 1px;
+}
+
+.SideMenu ul li a:hover {
+  color: lightblue;
+}
+
+.SideMenu .tweet-btn {
+  padding: 15px;
+  width: 150px;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  color: #fff;
+  background-color: #05a9f4;
+  border: none;
+}
+
+.show {
+  left: 0;
+}
+
+.trends-content {
+  overflow: scroll;
+  margin-top: 25px;
+}
+
+.trends-content h3 {
+  text-transform: capitalize;
+  text-align: center;
+}

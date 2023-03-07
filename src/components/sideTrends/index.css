@@ -1,0 +1,9 @@
+.SideTrends {
+  padding: 15px;
+}
+
+.SideTrends .trends-info span {
+  line-height: 35px;
+  color: lightgray;
+  letter-spacing: 0.75px;
+}

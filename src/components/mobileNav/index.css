@@ -1,0 +1,29 @@
+.MobileNav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightslategray;
+  background-color: #fff;
+  width: 100%;
+  max-width: 420px;
+  height: 100px;
+  padding: 25px;
+}
+
+.MobileNav .burger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 40px;
+}
+.MobileNav .burger .icon {
+  font-size: 1.75rem;
+  color: #05a9f4;
+}
+
+.MobileNav img {
+  width: 40px;
+}

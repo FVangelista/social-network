@@ -1,0 +1,22 @@
+.MobileFooter {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid lightslategray;
+  width: 100%;
+  max-width: 420px;
+  height: 75px;
+  padding: 25px;
+  background-color: #fff;
+}
+
+.MobileFooter li {
+  list-style-type: none;
+}
+
+.MobileFooter li img {
+  width: 35px;
+  filter: contrast(50%);
+}
