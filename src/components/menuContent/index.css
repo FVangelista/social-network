@@ -1,32 +1,59 @@
 .MenuContent ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   list-style-type: none;
-}
-.MenuContent ul li {
-  margin-bottom: 25px;
 }
 
 .MenuContent ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: fit-content;
+  padding: 15px;
   text-decoration: none;
   text-transform: capitalize;
   color: #fafafa;
-  letter-spacing: 0.75px;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .MenuContent ul li a:hover {
-  color: lightblue;
+  background-color: #ffffff3c;
+}
+
+.Menu ul li a .menu-text {
+  display: none;
+}
+
+.Menu ul li .logo {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+.Menu ul .main-logo {
+  padding-left: 15px;
 }
 
 .MenuContent .tweet-btn {
-  margin-top: 50px;
-  padding: 15px;
-  width: 150px;
-  border-radius: 25px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bolder;
-  color: #fff;
-  background-color: #05a9f4;
-  border: none;
-  cursor: pointer;
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .Menu ul li a .menu-text {
+    display: block;
+  }
+  .MenuContent .tweet-btn {
+    display: block;
+    margin-top: 50px;
+    padding: 15px;
+    width: 225px;
+    border-radius: 35px;
+    text-transform: capitalize;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fafafa;
+    background-color: #62b9f7;
+    border: none;
+    cursor: pointer;
+  }
 }

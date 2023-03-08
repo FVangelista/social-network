@@ -39,6 +39,11 @@
   color: #fafafa;
 }
 
+@media screen and (min-width: 400px) {
+  .Content {
+    width: 90%;
+  }
+}
 @media screen and (min-width: 900px) {
   .Content {
     width: 60%;

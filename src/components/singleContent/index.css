@@ -28,12 +28,17 @@
   min-width: 150px;
 }
 
+.text-info span {
+  width: inherit;
+}
+
 .text-info span:nth-child(1) {
   font-weight: bold;
   letter-spacing: 1px;
   line-height: 25px;
   margin-right: 10px;
 }
+
 .text-info span:nth-child(2) {
   color: #a2a2a2;
   letter-spacing: 1px;
