@@ -1,10 +1,25 @@
-import contentList from '../../mocks/contentList';
+// Hooks
+import { useState, useEffect } from 'react';
+
+// Components
 import SingleContent from '../singleContent/SingleContent';
 import './index.css';
+
+// React Icons
 import { IoMdArrowBack, IoIosMore } from 'react-icons/io';
-import { RiQuillPenFill } from 'react-icons/ri';
+// import { RiQuillPenFill } from 'react-icons/ri';
 
 const Content = () => {
+  const [dataContent, setDataContent] = useState([]);
+
+  useEffect(() => {
+    fetch('https://dummyjson.com/posts')
+      .then((res) => res.json())
+      .then((data) => {
+        setDataContent(data.posts);
+      });
+  }, []);
+
   return (
     <div className="Content">
       <div className="header">
@@ -20,12 +35,10 @@ const Content = () => {
           <IoIosMore />
         </a>
       </div>
-      {contentList.map((content) => (
+
+      {dataContent.map((content) => (
         <SingleContent data={content} key={content.id} />
       ))}
-      <a className="btn">
-        <RiQuillPenFill />
-      </a>
     </div>
   );
 };

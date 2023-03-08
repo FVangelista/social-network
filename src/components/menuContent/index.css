@@ -8,8 +8,9 @@
 .MenuContent ul li a {
   text-decoration: none;
   text-transform: capitalize;
-  color: lightslategray;
-  letter-spacing: 1px;
+  color: #fafafa;
+  letter-spacing: 0.75px;
+  font-size: 1.2rem;
 }
 
 .MenuContent ul li a:hover {

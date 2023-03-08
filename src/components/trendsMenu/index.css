@@ -1,9 +1,16 @@
 .TrendsMenu {
   overflow: scroll;
   margin-top: 25px;
+  background-color: #212327;
+  border-radius: 14px;
+  padding: 10px 5px;
+  height: 50%;
 }
 
 .TrendsMenu h3 {
   text-transform: capitalize;
-  text-align: center;
+  text-align: start;
+  padding: 0px 0px 15px 15px;
+  color: #ffffff;
+  letter-spacing: 0.75px;
 }

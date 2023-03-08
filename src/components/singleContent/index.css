@@ -1,11 +1,12 @@
 .single-content {
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 0.75px solid #a2a2a2;
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 20px;
   padding: 25px;
   min-height: 150px;
   flex-shrink: 0;
+  color: #efefef;
 }
 
 @media screen and (max-width: 300px) {
@@ -16,33 +17,34 @@
 
 .user-img {
   align-self: flex-start;
-  width: 65px;
-  height: 65px;
+  width: 50px;
   border-radius: 50%;
-  border: 2px solid #05a9f4;
-  padding: 2px;
+  background-color: #fafafa;
 }
 
 .text-info {
   position: relative;
   min-height: 100%;
-  width: 350px;
   min-width: 150px;
 }
 
 .text-info span:nth-child(1) {
-  color: lightgray;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 25px;
+  margin-right: 10px;
+}
+.text-info span:nth-child(2) {
+  color: #a2a2a2;
   letter-spacing: 1px;
   line-height: 25px;
 }
 
 .icons {
-  position: absolute;
-  bottom: 0;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding-top: 15px;
+  width: 75%;
+  padding-top: 25px;
 }
 
 .icons img {
