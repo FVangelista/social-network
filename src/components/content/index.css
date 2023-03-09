@@ -5,38 +5,7 @@
   height: 100vh;
   width: 100%;
   overflow: scroll;
-}
-
-.Content .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px;
-  width: 100%;
-  min-height: 15vh;
-  border-bottom: 0.75px solid #a2a2a2;
-}
-
-.Content .header .search-bar {
-  width: 70%;
-  padding: 10px;
-  border: none;
-  border-radius: 20px;
-  background-color: #212327;
-}
-
-.Content .header .search-bar::placeholder {
-  text-transform: capitalize;
-  color: #fafafa;
-  font-weight: 500;
-}
-
-.Content .header a {
-  text-align: center;
-  font-size: 1.5rem;
-  width: 15%;
-  cursor: pointer;
-  color: #fafafa;
+  transition: all 0.35s;
 }
 
 @media screen and (min-width: 400px) {
@@ -54,4 +23,11 @@
   .Content {
     width: 40%;
   }
+}
+
+/* Scroll effect */
+
+.scrollEffect {
+  transform: translateY(-45px);
+  height: calc(100vh + 50px);
 }

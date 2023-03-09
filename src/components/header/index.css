@@ -1,0 +1,48 @@
+.Header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  width: 100%;
+  min-height: 15vh;
+  border-bottom: 0.75px solid #a2a2a2;
+}
+
+.Header::before {
+  content: '';
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  width: 100%;
+  height: 100%;
+}
+
+.Header .search-bar {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #212327;
+  z-index: 3;
+}
+
+.Header .search-bar::placeholder {
+  text-transform: capitalize;
+  color: #fafafa;
+  font-weight: 500;
+}
+
+.Header a {
+  text-align: center;
+  font-size: 1.5rem;
+  width: 15%;
+  cursor: pointer;
+  color: #fafafa;
+  z-index: 3;
+}

@@ -15,9 +15,10 @@
     padding: 15px 10px;
   }
 }
+
 @media screen and (min-width: 900px) {
   .Menu {
-    width: 40%;
+    width: 20%;
     padding: 25px 45px;
   }
 }
