@@ -1,4 +1,4 @@
-import contentList from '../../mocks/contentList';
+import contentList from '../../../mocks/contentList';
 import SideTrends from '../sideTrends';
 import './index.css';
 

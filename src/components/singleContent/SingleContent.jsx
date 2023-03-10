@@ -1,19 +1,16 @@
 import { useState, useEffect } from 'react';
 import './index.css';
 
-const SingleContent = ({ data }) => {
-  // #1 - Destructuring the content from the fetch(posts) made on the content.jsx file
-  //  and passed as a prop (data) to the singleContent component.
+// Icons
 
-  // #2 - Using its userId key to pass as a parameter on the query of the singleData fetch.
-  // by doing it we're able to get a single user data based on the userId from the fetch(posts).
+import { BsUpload, BsChat, BsHeart, BsArrowDownUp } from 'react-icons/bs';
 
-  // #3 - Getting additional params from the fetch(posts) to use it in the singleContent component body (e.g. body, tags).
-
-  // sideNote_ now we have access to both fetch contents, the downside is that
-  // for the singleData we'll be performing mutiples fetch calls.
-
+const SingleContent = ({ data, setPutModalVisible }) => {
   const { userId, body, tags } = data;
+
+  const isCliked = () => {
+    setPutModalVisible(true);
+  };
 
   // #1
   const [singleData, setSingleData] = useState({});
@@ -38,22 +35,18 @@ const SingleContent = ({ data }) => {
         <span>{'@' + tags.join(' - ')}</span>
         <p>{body}</p>
         <div className="icons">
-          <img
-            src="https://img.icons8.com/ios/512/filled-chat.png"
-            alt="chat icon"
-          />
-          <img
-            src="https://img.icons8.com/fluency-systems-regular/512/retweet.png"
-            alt="retweet icon"
-          />
-          <img
-            src="https://img.icons8.com/ios-glyphs/512/hearts.png"
-            alt="hearts icon"
-          />
-          <img
-            src="https://img.icons8.com/pastel-glyph/512/upload.png"
-            alt="upload icon"
-          />
+          <a href="#" className="icon">
+            <BsChat />
+          </a>
+          <a href="#" onClick={isCliked} className="icon">
+            <BsArrowDownUp />
+          </a>
+          <a href="#" className="icon">
+            <BsHeart />
+          </a>
+          <a href="#" className="icon">
+            <BsUpload />
+          </a>
         </div>
       </div>
     </div>

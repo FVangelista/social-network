@@ -3,7 +3,11 @@ import { FaHashtag, FaEnvelope, FaRegBookmark } from 'react-icons/fa';
 import { RiHome7Fill, RiNotification2Line } from 'react-icons/ri';
 import './index.css';
 
-const MenuContent = () => {
+const MenuContent = ({ setModalVisible }) => {
+  const isCliked = () => {
+    setModalVisible(true);
+  };
+
   return (
     <div className="MenuContent">
       <ul>
@@ -41,7 +45,9 @@ const MenuContent = () => {
           </a>
         </li>
         <li>
-          <button className="tweet-btn">tweet</button>
+          <button onClick={isCliked} className="tweet-btn">
+            tweet
+          </button>
         </li>
       </ul>
     </div>

@@ -1,0 +1,11 @@
+.PopUp {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  color: #fafafa;
+  background-color: #62b9f7;
+  z-index: 6;
+}

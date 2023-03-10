@@ -1,10 +1,10 @@
 import MenuContent from '../menuContent';
 import './index.css';
 
-const Menu = () => {
+const Menu = ({ setModalVisible }) => {
   return (
     <div className="Menu">
-      <MenuContent />
+      <MenuContent setModalVisible={setModalVisible} />
     </div>
   );
 };

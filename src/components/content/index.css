@@ -28,6 +28,6 @@
 /* Scroll effect */
 
 .scrollEffect {
-  transform: translateY(-45px);
-  height: calc(100vh + 50px);
+  transform: translateY(-55px);
+  height: calc(100vh + 55px);
 }
