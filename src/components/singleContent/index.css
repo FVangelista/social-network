@@ -1,6 +1,8 @@
 .single-content {
   border-bottom: 0.75px solid #a2a2a2;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 20px;
   padding: 15px 20px;
@@ -21,16 +23,13 @@
   width: 50px;
   border-radius: 50%;
   background-color: #fafafa;
+  margin: 0 auto;
 }
 
 .text-info {
   position: relative;
   min-height: 100%;
   min-width: 150px;
-}
-
-.text-info span {
-  width: inherit;
 }
 
 .text-info span:nth-child(1) {
@@ -50,7 +49,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65%;
+  width: 100%;
   padding-top: 25px;
 }
 
@@ -62,4 +61,16 @@
   font-size: 1rem;
   color: #fafafa;
   cursor: pointer;
+}
+
+@media screen and (min-width: 400px) {
+  .single-content {
+    flex-direction: row;
+  }
+  .user-img {
+    margin: 0;
+  }
+  .icons {
+    width: 65%;
+  }
 }

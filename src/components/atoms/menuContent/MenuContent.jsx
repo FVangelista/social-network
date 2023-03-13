@@ -1,6 +1,8 @@
 import { IoLogoTwitter } from 'react-icons/io';
 import { FaHashtag, FaEnvelope, FaRegBookmark } from 'react-icons/fa';
 import { RiHome7Fill, RiNotification2Line } from 'react-icons/ri';
+
+import MobileButton from '../mobileButton';
 import './index.css';
 
 const MenuContent = ({ setModalVisible }) => {
@@ -48,6 +50,7 @@ const MenuContent = ({ setModalVisible }) => {
           <button onClick={isCliked} className="tweet-btn">
             tweet
           </button>
+          <MobileButton clickFunc={isCliked} />
         </li>
       </ul>
     </div>

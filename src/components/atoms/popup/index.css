@@ -7,5 +7,18 @@
   width: 100vw;
   color: #fafafa;
   background-color: #62b9f7;
+  text-transform: capitalize;
   z-index: 6;
+}
+.PopUp button {
+  background-color: #fafafa;
+  border: none;
+  padding: 5px;
+  border-radius: 20px;
+  text-transform: capitalize;
+  color: #62b9f7;
+}
+
+.hide {
+  display: none;
 }

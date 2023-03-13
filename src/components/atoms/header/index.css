@@ -5,11 +5,11 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0px;
   width: 100%;
   min-height: 110px;
   border-bottom: 0.75px solid #a2a2a2;
   z-index: 2;
+  transition: all 0.35s;
 }
 
 .Header::before {
@@ -26,16 +26,57 @@
 }
 
 .nav-bottom {
+  width: 100%;
+  height: 40%;
+  z-index: 5;
+}
+
+.nav-bottom ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style-type: none;
+}
+
+.nav-bottom ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  color: #fafafa;
+  cursor: pointer;
+  text-transform: capitalize;
+  transition: all 1s;
+}
+
+.nav-bottom ul li:hover::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  width: 55px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #62b9f7;
+}
+
+.nav-top {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 40px;
+  height: 60%;
   width: 100%;
   z-index: 5;
 }
 
-.Header .nav-bottom .search-bar {
+.nav-top form {
   width: 70%;
+}
+
+.Header .nav-top .search-bar {
+  width: 100%;
   padding: 10px;
   border: none;
   border-radius: 20px;
@@ -43,19 +84,26 @@
   color: #fafafa;
 }
 
-.Header .nav-bottom .search-bar::placeholder {
+.Header .nav-top .search-bar::placeholder {
   text-transform: capitalize;
   color: #fafafa;
   font-weight: 500;
 }
-.Header .nav-bottom .search-bar:focus {
+.Header .nav-top .search-bar:focus {
   outline: none;
 }
 
-.Header .nav-bottom a {
+.Header .nav-top a {
   text-align: center;
   font-size: 1.25rem;
   cursor: pointer;
   color: #fafafa;
   z-index: 5;
+}
+
+/* Scroll effect */
+
+.scrollEffect {
+  transform: translateY(-55px);
+  height: calc(100vh + 55px);
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BsArrowLeft } from 'react-icons/bs';
 import './index.css';
 
 const PutModal = ({ setPutModalVisible }) => {
@@ -35,6 +36,12 @@ const PutModal = ({ setPutModalVisible }) => {
       <div className="PutModal__overlay" onClick={isClikedOverlay}></div>
       <div className="PutModal__content">
         <form onSubmit={onHandleSubmit} className="PutModal__content--form">
+          <div className="controllers">
+            <button onClick={isClikedOverlay} className="close-btn">
+              <BsArrowLeft />
+            </button>
+            <input className="put-btn" type="submit" value="Update" />
+          </div>
           <input
             type="text"
             placeholder="Id"
@@ -53,8 +60,6 @@ const PutModal = ({ setPutModalVisible }) => {
             value={messageInput}
             onChange={(e) => setMessageInput(e.target.value)}
           />
-
-          <input type="submit" value="Update" />
         </form>
       </div>
     </div>

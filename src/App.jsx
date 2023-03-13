@@ -5,6 +5,7 @@ import Trends from './components/atoms/trends';
 import Modal from './components/modal';
 import PutModal from './components/putModal/PutModal';
 import PopUp from './components/atoms/popup';
+// import PopUp from './components/atoms/popup';
 import './App.css';
 
 import { useState } from 'react';
@@ -12,20 +13,20 @@ import { useState } from 'react';
 function App() {
   const [isModal, setModal] = useState(false);
   const [isPutModal, setPutModal] = useState(false);
+  const [isPopup, setPopup] = useState(false);
 
   return (
     <div className="App">
       <Menu setModalVisible={setModal} />
 
-      <Content setPutModalVisible={setPutModal} />
+      <Content setModalVisible={setModal} setPutModalVisible={setPutModal} />
 
       <Trends />
 
       {isModal && <Modal setModalVisible={setModal} />}
       {isPutModal && <PutModal setPutModalVisible={setPutModal} />}
-      <PopUp>
-        <h2>popup</h2>
-        <button>accept</button>
+      <PopUp popUp={isPopup}>
+        <button onClick={() => setPopup(true)}>accept</button>
       </PopUp>
     </div>
   );

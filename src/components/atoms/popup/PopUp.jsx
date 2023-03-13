@@ -1,8 +1,8 @@
 import './index.css';
 
-const PopUp = ({ children }) => {
+const PopUp = ({ popUp, children }) => {
   return (
-    <div className="PopUp">
+    <div className={`PopUp ${popUp ? 'hide' : ''}`}>
       <h1>this is a pop up</h1>
       {children}
     </div>

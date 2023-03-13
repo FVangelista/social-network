@@ -1,51 +1,45 @@
 // Hooks
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
 
 // Components
-import SingleContent from '../singleContent/SingleContent';
+
 import Header from '../atoms/header';
+import ContentList from '../contentList/ContentList';
+import { RiQuillPenLine } from 'react-icons/ri';
+
 import './index.css';
 
-const Content = ({ setPutModalVisible }) => {
-  const [dataContent, setDataContent] = useState([]);
+const Content = ({ setModalVisible, setPutModalVisible }) => {
+  const isCliked = () => {
+    setModalVisible(true);
+  };
 
-  useEffect(() => {
-    fetch('https://dummyjson.com/posts')
-      .then((res) => res.json())
-      .then((data) => {
-        setDataContent(data.posts);
-      });
-  }, []);
+  const [inputData, setInputData] = useState('');
 
+  // 09-03-2023 - README file for more details.
   // #1
   const mainContentRef = useRef(null);
 
-  // #3
+  // 2#
   const scrollEffect = () => {
+    // 3#
     mainContentRef.current.scrollTop >= 1 ? setScroll(true) : setScroll(false);
   };
 
-  // #4
+  // 4#
   const [isScroll, setScroll] = useState(false);
 
   return (
-    <div
-      // #4
-      className={`Content ${isScroll ? 'scrollEffect' : ''}`}
-      // #1
-      ref={mainContentRef}
-      // #2
-      onScroll={scrollEffect}
-    >
-      <Header />
-
-      {dataContent.map((content) => (
-        <SingleContent
-          data={content}
-          setPutModalVisible={setPutModalVisible}
-          key={content.id}
-        />
-      ))}
+    <div className="Content" ref={mainContentRef} onScroll={scrollEffect}>
+      {/* #5 */}
+      <Header scroll={isScroll} setInputData={setInputData} />
+      <ContentList
+        setPutModalVisible={setPutModalVisible}
+        inputData={inputData}
+      />
+      <button onClick={isCliked} className="tweet-btn-mobile">
+        <RiQuillPenLine />
+      </button>
     </div>
   );
 };

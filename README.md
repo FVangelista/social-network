@@ -30,9 +30,10 @@ of the subject that we are going to manipulate.
 2# - Afterwards was added on the same component an event listener (onScroll),
 and passed the callback function (scrollEffect) through it.
 
-3# The data within the callback is a condition that is going to look for the current scroll value (scrollTop, returns the number of pixels an element's content is scrolled vertically) using the reference that we passed to the component, if it is bigger/equal to 1.
+3# The data within the callback is a condition that is going to look for the current scroll value (scrollTop, returns the number of pixels an element's content is scrolled vertically) using the reference that was passed to the component, if it is bigger/equal to 1.
 
 4# An useState hook was set which is by
-default a boolean(false), it is going to be true if our condition is true.
+default a boolean(false), it is going to be true if our condition is true,
+then passed as a prop to the Header component.
 
-5# - The useState in turn sets a class on the component if its value is true
+5# - The useState in turn sets a class on the Header component if its value is true

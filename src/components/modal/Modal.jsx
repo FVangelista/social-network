@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BsArrowLeft } from 'react-icons/bs';
 import './index.css';
 
 const Modal = ({ setModalVisible }) => {
@@ -36,6 +37,12 @@ const Modal = ({ setModalVisible }) => {
       <div className="Modal__overlay" onClick={isClikedOverlay}></div>
       <div className="Modal__content">
         <form onSubmit={onHandleSubmit} className="Modal__content--form">
+          <div className="controllers">
+            <button onClick={isClikedOverlay} className="close-btn">
+              <BsArrowLeft />
+            </button>
+            <input className="post-btn" type="submit" value="Post" />
+          </div>
           <input
             type="text"
             placeholder="Title"
@@ -54,7 +61,6 @@ const Modal = ({ setModalVisible }) => {
             value={userIdInput}
             onChange={(e) => setUserIdInput(e.target.value)}
           />
-          <input type="submit" value="Post" />
         </form>
       </div>
     </div>
